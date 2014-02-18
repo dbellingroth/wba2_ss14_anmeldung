@@ -1,6 +1,28 @@
 var express = require('express');
- 
+var fs = require('fs');
+
 var app = express();
+var database = 'data.json';
+
+function write_json(data, filename) {
+	fs.writeFile(filename, JSON.stringify(data, null, 4), function(err) {
+		if(err) {
+			console.log(err);
+		} else {
+			console.log('JSON-Datei geschrieben')
+		}
+	});
+}
+
+function read_json(filename, callback) {
+	fs.readFile(filename, 'utf8', function(err, data){
+		if(err) {
+			console.log(err);
+		}
+		data = JSON.parse(data);
+		callback(data);
+	});
+}
 
 app.get('/', function(req, res) {
 	//statische HTML-Datei ausliefern
@@ -9,12 +31,14 @@ app.get('/', function(req, res) {
  
 //GET auf Gruppenliste
 app.get('/gruppen', function(req, res) {
-	
+	read_json(database, function(data){
+		res.send(data);
+	});
 });
 
 //POST auf Gruppenliste
 app.post('/gruppen', function(req, res) {
-    
+	
 });
 
 //GET auf einzelne Gruppe
