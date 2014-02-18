@@ -1,0 +1,15 @@
+{
+  "name": "Anmeldung",
+  "version": "0.1",
+  "description": "WBA2 Sommersemester 2014 Testprojekt Anmeldung",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "author": "David Bellingroth",
+  "readmeFilename": "README.md",
+  "dependencies": {
+      "express": "3.x",
+      "brackets": "0.x"
+  }
+}
