@@ -1,10 +1,11 @@
 [
-{
-	"vorname": "Kevin",
-	"nachname": "Mandy"
-},
-{
-	"vorname": "Mandy",
-	"nachname": "Mandy"
-}
+    {
+        "vorname": "David",
+        "nachname": "Bellingroth",
+        "email": "david.bellingroth@fh-koeln.de",
+        "erfahrung": "fortgeschrittener",
+        "schlagzeug": "nicht_vorhanden",
+        "anmerkungen": "fdsukadhflksdbflahsdbfj",
+        "agb": "on"
+    }
 ]

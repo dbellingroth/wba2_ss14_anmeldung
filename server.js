@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require('fs');
 
 var app = express();
+app.use(express.json());
 var database = 'data.json';
 
 function write_json(data, filename) {
@@ -45,7 +46,11 @@ app.get('/gruppen', function(req, res) {
 
 //POST auf Gruppenliste
 app.post('/gruppen', function(req, res) {
-	
+	read_json(database, function(data) {
+		data.push(req.body);
+		write_json(data, database);
+		res.end(JSON.stringify({'message': 'Daten erfolgreich in die Datei geschrieben'}));
+	});
 });
 
 //GET auf einzelne Gruppe
