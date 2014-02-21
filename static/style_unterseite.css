@@ -1,0 +1,291 @@
+/* Moritz Gräb, David Struzek, Tim Schulte */
+
+#wrap > article {
+    margin-left: 240px;
+    position: relative;
+    width: 700px;
+}
+.marginalie_links, aside {
+    height: 0;
+    margin-left: -240px;
+    width: 220px;
+}
+aside {
+    color: blue;
+    text-align: right;
+}
+/* Links werden schwarz dagestellt. */
+a:link {color:black}
+a:visited {color:black}
+a:hover {color:black}
+a:active {color:black}
+p {
+    line-height: 123%;
+    padding-bottom: 15px;
+}
+fieldset {
+    border-color: #C4C4C4;
+    border-width: 1px;
+    box-shadow: 0 8px 6px -6px #999999; /* schatten unter den fieldsetz. schatten wirkt so als ob das licht von oben auf beiden seiten kommt. */
+    display: none;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+label {
+    display: inline-block;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-top: 19px;
+    text-align: right;
+    width: 80px;
+}
+h1 {
+    border-bottom: 2px solid #9AC120;
+    height: 21px;
+    text-align: left;
+}
+h2{
+	padding-top: 2px;
+}
+fieldset select {
+    margin-right: 83px;
+    width: 139px;
+}
+fieldset input {
+    margin-right: 83px;
+    width: 135px;
+}
+/* damit gruppenfield von nicht visible ist */
+#gruppenField {
+    display: block;
+}
+/* erfahrungs schlagzeug select */
+#erfahrung, #schlagz-haupt  {
+    margin-left: -3px;
+}
+/* Anmerkungen in allen drei unterseiten */
+#anmerkungen {
+    font-size: 11px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    width: 450px;
+}
+#an {
+    float: left;
+    text-align: right;
+}
+/* Sendebutton */
+.submit {
+    background-color: #4368AB;
+    border: 0 none;
+    box-shadow: 0 8px 6px -6px #999999;
+    color: white;
+    display: none;
+    float: right;
+    font-family: Arial;
+    font-size: 13px;
+    height: 32px;
+    margin-top: 10px;
+    padding-left: 35px;
+    width: 133px;
+}
+/* Sendebutton bei mouseover */
+.submit:hover {
+    background-color: #94C120;
+}
+/* Sendebutton bei der einzelanmeldung */
+#submitEinz {
+    display: block;
+    margin-top: 10px;
+}
+
+/* AGB Checkbox*/
+#agb {
+    margin: 0;
+    width: auto;
+}
+/*AGB Fieldset*/
+.agbs {
+	padding-top: 5px;
+    display: inline-block;
+}
+/*AGB Fieldset gruppen und zu gruppen*/
+#agbs {
+	visibility: hidden;
+	display: none; 
+	width: 496px;
+	margin-bottom: 0px;
+}
+/*AGB Fieldset einzel*/
+#agbs1{
+	width: 526px;
+}
+/*person hinzufügen*/
+
+
+/* person hinzufügen button*/
+#newPerson {
+    background-color: #4368AB;
+    border: 0 none;
+    box-shadow: 0 8px 6px -6px #999999;
+    color: white;
+    font-family: Arial;
+    font-size: 13px;
+    height: 32px;
+    margin-right: 10px;
+	margin-top: 10px;
+    padding-left: 32px;
+    width: 168px;
+}
+/* person hinzufügen button bei mouseover */
+#newPerson:hover {
+    background-color: #F8B738;
+}
+
+/* 
+Validation Engine einstellungen
+*/
+.LV_validation_message {
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+.LV_valid {
+    color: #00CC00;
+}
+.LV_invalid {
+    color: #CC0000;
+}
+.LV_valid_field, input.LV_valid_field:hover, input.LV_valid_field:active, textarea.LV_valid_field:hover, textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+.LV_invalid_field, input.LV_invalid_field:hover, input.LV_invalid_field:active, textarea.LV_invalid_field:hover, textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+
+/* x button zum löschen von personen */
+.xa {
+    left: 676px;
+    margin-top: -8px;
+    position: absolute;
+    width: 13px;
+    z-index: 10;
+}
+.xb {
+    left: 676px;
+    margin-top: -8px;
+    position: absolute;
+    width: 12px;
+}
+/* bild auf Person hinzufügen butten */
+#plus {
+    padding-top: 13px;
+    position: absolute;
+
+}
+/* Icon auf absendebutton  */
+#brief {
+    padding-left: 568px;
+    padding-top: 15px;
+    position: absolute;
+}
+/* Icon auf absendebutton  Einzelseite*/
+#brief2 {
+    margin-left: 25px;
+    margin-top: 16px;
+    position: absolute;
+}
+
+/* Bilder auf der index */
+.bild {
+    display: inline-block;
+    float: left;
+    width: 400px;
+}
+.bild2 {
+    display: inline-block;
+    float: right;
+    width: 400px;
+}
+
+/* Div für text index */
+.hdiv {
+    display: inline;
+}
+/* Div für jede zeile auf der index */
+.oberdiv {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 700px;
+}
+/* Texte rechts und links für die indexseite  */
+.ind_rechts {
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+    margin-top: 10px;
+    width: 290px;
+
+}
+.ind_links {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+    width: 290px;
+
+}
+
+/* Striche unter überschriften, alle einzelt damit man verschiedene farben verwenden kann wenn man möchte */
+#hEinz {
+    border-bottom-color: #9AC120;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+#hGrup {
+    border-bottom-color: #9AC120;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    text-align: right;
+}
+#hNach {
+    border-bottom-color: #9AC120;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+#hAb {
+    border-bottom-color: #9AC120;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    text-align: right;
+}
+/* links nicht unterstricken  */
+#indexlink a
+{
+
+	font-color: black;
+	font-style: normal;
+	text-decoration:none;
+}
+
+/* Person zu gruppe seite. positionierung des hinweis.  */
+#hin {
+    display: inline-table;
+    padding-left: 5px;
+    width: 430px;
+}
+
+#hi {
+    display: inline-table;
+    padding-bottom: 14px;
+    text-align: right;
+    width: 80px;
+}
+/* KEINE AHNUNG 
+#nach {
+    border-bottom: 2px solid #9AC120;
+    height: 21px;
+    padding-top: 4px;
+    text-align: left;
+    width: 120px;
+}
+*/

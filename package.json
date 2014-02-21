@@ -1,6 +1,6 @@
 {
   "name": "Anmeldung",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "WBA2 Sommersemester 2014 Testprojekt Anmeldung",
   "main": "server.js",
   "scripts": {

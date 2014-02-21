@@ -1,9 +1,171 @@
 <!DOCTYPE html>
+<!-- NBA-Projekt. Erstellt von Moritz Graeb, David Struzek und Tim Schulte -->
 <html>
 <head>
-<title>Gruppenanmeldung</title>
+<meta charset="utf-8">
+<title>Schlagzeugweltrekord | Einzelanmeldung</title>
+<!-- Die vorgegebenen CSS-Datein werden engebunden -->
+<link rel="stylesheet" type="text/css" href="static/style.css">
+<link rel="stylesheet" type="text/css" href="static/style_unterseite.css">
+
+<!-- CSS für jQuery UI -->
+<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    
+<!-- Aktuelles jQuery wird geladen -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<!-- jQuery UI, wird für Datepicker benötigt -->
+ <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+ 
+<!-- Unsere Selbsterstellte Skriptdatei wird geladen. -->
+<script type="text/javascript">
+// Wird gestartet wenn die ganze geladen ist. 	
+$(document).ready(function(){
+    $('#geburtsdatum').datepicker({
+        'dateFormat': 'dd.mm.yy'
+    });
+    
+});	
+</script>
+
+<!-- Davids Script wird geladen -->
+ <script src="/app.js"></script>
+
 </head>
 <body>
-	<h1>Gruppenanmeldung</h1>
+<div id="wrap" class="clearfix"> 
+    
+    <!-- Header -->
+    <header> 
+        
+        <!-- Hauptnavigation -->
+        <nav>
+            <ul>
+                <li id="item1"><a href="#">Home</a></li>
+                <li id="item2"><a href="#">&Uuml;ber den Rekord</a></li>
+                <li id="item3"><a href="#">Organisatorisch</a></li>
+                <li id="item4">Location</li>
+                <li id="item5"><a href="#">Kontakt</a></li>
+                <li id="item6"><a href="#">Weiterer Link</a></li>
+            </ul>
+        </nav>
+        <object type="image/svg+xml" data="static/logo.svg" width="140" height="89">
+            
+            <!-- Fallback, falls SVG-Dateien nicht unterstuetzt werden -->
+            <p><img src="static/logo.jpg" alt="Logo Weltrekordversuch" width="140" height="89" /></p>
+        </object>
+        <div  style="clear: both;"> </div>
+    </header>
+    
+    <!-- Teaser -->
+    <div id="teaser"> <img src="static/einzelhead.jpg" alt="Der Campus Gummersbach" width="940" height="360" /> </div>
+    
+    <!-- Artikel -->
+    <article>
+        <div  class="marginalie_links">
+            <h1>Einzelanmeldung</h1>
+            <p>Um dich erfolgreich anzumelden und uns zum Weltrekord zu verhelfen benötigen wir von dir 
+			Vornamen, Nachname, Alter und deine Einverständniss Erklärung der AGB´s. 
+			Alle weiteren Informationen bekommst du nach deiner Anmeldung zugeschickt. 
+			Damit wir dir helfen können, solltest du noch nicht lange Schlagzeug spielen,
+			bitten wir darum das Feld für Erfahrung anzugeben. 
+			So können wir dir einen guten Platz zwischen Erfahreneren Drummern zuweisen.
+</p>
+			<p>Zum eingeben deinem Geburtsdatums einfach in das dafür vergesehene Feld klicken und ein Popup zur eingabe öffnet sich.</p>
+        </div>
+        
+    <!-- ############################### Hier beginnt der von uns Erstellte teil der HTML-Datei ########################################-->
+
+
+	<form id="form_anmeldung" action="/">
+		<fieldset id="gruppenField">
+			<legend id="gL">Einzelanmeldung</legend>
+				<label for="vorname">Vorname:</label><input id="vorname" type="text" name="vorname">
+				<label for="nachname">Nachname:</label><input id="nachname" type="text" name="nachname" >
+				<br>
+				<label for="email">Email:</label><input id="email" type="text" name="email" placeholder="test@mail.de">
+				<label for="geburtsdatum">Geburtsdatum:</label><input id="geburtsdatum" type="text" name="geburtsdatum" placeholder="01.01.1980" readonly>
+				<br>
+				<label for="erfahrung">Erfahrung:</label>
+					<select name="erfahrung" size="1" id="erfahrung">
+						<option value="amateur">Amateur</option>
+						<option value="fortgeschrittener">Fortgeschrittener</option>
+						<option value="profi">Profi</option>
+					</select>
+				<label for="schlagzeug">Schlagzeug:</label>
+					<select name="schlagzeug" size="1" id="schlagzeug">
+						<option value="vorhanden">vorhanden</option>
+						<option value="nicht_vorhanden">nicht vorhanden</option>
+					</select>
+				<br>
+				<label id="an" for="anmerkungen">Anmerkungen:</label>
+					<textarea id="anmerkungen" rows="5" cols="75" name="anmerkungen" maxlength="300" placeholder="Wichtig für mich ist..."></textarea>	
+			</fieldset>
+			
+			
+			<fieldset id="agbs1" class="agbs">
+				<legend>AGB</legend>
+					<input type="Checkbox" name="agb" id="agb" class="validate[required] checkbox" > Ich bin mit den <a href="http://google.de/" target="_blank"><i>Allgemeinen Gesch&auml;ftsbedingungen</i></a> einverstanden.
+			</fieldset>
+			<input type="image" src="static/brief.png" id="brief2" alt="briefumschlag">
+			<input id="submitEinz" type="Submit" value="Abschicken" class="submit"><!-- Absendebutton -->
+	</form>
+
+
+    <!-- ############################### Hier endet der von uns Erstellte teil der HTML-Datei ########################################-->
+    </article>
+</div>
+
+<!-- Footer mit Links -->
+<footer class="clearfix">
+    <div>
+        <ul>
+            <li><a href="#">RSS-Feed</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Infos &uuml;ber den Weltrekord</a></li>
+            <li><a href="#">Programmablauf</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Die Stadt Gummersbach</a></li>
+            <li><a href="#">Der Campus Gummersbach</a></li>
+            <li><a href="#">virtueller Rundgang </a></li>
+            <li><a href="#">Wegbeschreibung </a></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#">Die Teilnehmer</a></li>
+            <li><a href="#">Special Guests</a></li>
+            <li><a href="#">Anmeldeformular</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Das Schlagzeug</a></li>
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">B&ouml;rse</a></li>
+            <li><a href="#">Mitfahrzentrale</a></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#">Virtueller Trainingsraum</a></li>
+            <li><a href="#">&Uuml;bungsanleitung </a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Sponsoren</a></li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Pressebereich</a></li>
+            <li><a href="#">Pressespiegel</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>

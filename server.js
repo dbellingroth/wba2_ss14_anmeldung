@@ -24,9 +24,16 @@ function read_json(filename, callback) {
 	});
 }
 
+app.use("/static", express.static(__dirname + '/static'));
+
 app.get('/', function(req, res) {
 	//statische HTML-Datei ausliefern
 	res.sendfile(__dirname + '/index.html');
+});
+
+app.get('/app.js', function(req, res) {
+	//statische Javascript-Datei ausliefern
+	res.sendfile(__dirname + '/app.js');
 });
  
 //GET auf Gruppenliste
