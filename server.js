@@ -1,8 +1,10 @@
 var express = require('express');
 var fs = require('fs');
+var brackets = require('brackets');
 
 var app = express();
 app.use(express.json());
+app.use('/brackets', brackets())
 var database = 'data.json';
 
 function write_json(data, filename) {
